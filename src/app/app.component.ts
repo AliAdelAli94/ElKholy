@@ -1,4 +1,4 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, AfterViewInit, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
@@ -6,20 +6,26 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent implements OnInit, AfterViewInit {
   title = 'ElKoholyPortal';
 
   constructor(public translate: TranslateService) {
     translate.use('ar');
   }
-  ngAfterViewInit(): void {
-
-    let script = document.createElement('script');
-      script.type = 'text/javascript';
-      script.src =  "/assets/js/main.js";
-      document.getElementsByTagName('head')[0].appendChild(script);
+  ngOnInit() {
 
   }
+  ngAfterViewInit(): void {
+this.animateElements();
+  }
 
-  
+  animateElements() {
+    function add_chatinline() {
+      var hccid = 31525359; var nt = document.createElement("script"); nt.async = true;
+      nt.src = "https://mylivechat.com/chatinline.aspx?hccid=" + hccid;
+      var ct = document.getElementsByTagName("script")[0]; ct.parentNode.insertBefore(nt, ct);
+    }
+    add_chatinline();
+  }
+
 }
