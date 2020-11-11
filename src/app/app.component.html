@@ -1,21 +1,82 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<app-header></app-header>
+<div class="home-wrapper home-1">
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/cli">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
 
-<router-outlet></router-outlet>
+<!-- Modal Area Start Here -->
+<div class="modal fade obrien-modal" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <button type="button" class="close close-button" data-dismiss="modal" aria-label="Close">
+                <span class="close-icon" aria-hidden="true">x</span>
+            </button>
+            <div class="modal-body">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 text-center">
+                            <div class="product-image">
+                                <img src="assets/images/product/1.jpg" alt="Product Image">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="modal-product">
+                                <div class="product-content">
+                                    <div class="product-title">
+                                        <h4 class="title">Product dummy name</h4>
+                                    </div>
+                                    <div class="price-box">
+                                        <span class="regular-price ">$80.00</span>
+                                        <span class="old-price"><del>$90.00</del></span>
+                                    </div>
+                                    <div class="product-rating">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <i class="fa fa-star-o"></i>
+                                        <span>1 Review</span>
+                                    </div>
+                                    <p class="desc-content">we denounce with righteous indignation and dislike men who
+                                        are so beguiled and demoralized by the charms of pleasure of the moment, so
+                                        blinded by desire, that they cannot foresee the pain and trouble that are bound
+                                        to ensue; and equal blame bel...</p>
+                                    <form class="d-flex flex-column w-100" action="#">
+                                        <div class="form-group">
+                                            <select class="form-control nice-select w-100">
+                                                <option>S</option>
+                                                <option>M</option>
+                                                <option>L</option>
+                                                <option>XL</option>
+                                                <option>XXL</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                    <div class="quantity-with_btn">
+                                        <div class="quantity">
+                                            <div class="cart-plus-minus">
+                                                <input class="cart-plus-minus-box" value="0" type="text">
+                                                <div class="dec qtybutton">-</div>
+                                                <div class="inc qtybutton">+</div>
+                                            </div>
+                                        </div>
+                                        <div class="add-to_cart">
+                                            <a class="btn obrien-button primary-btn" href="cart.html">Add to cart</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Modal Area End Here -->
+
+<!-- Scroll to Top Start -->
+<a class="scroll-to-top" href="#">
+    <i class="ion-chevron-up"></i>
+</a>
+<!-- Scroll to Top End -->
