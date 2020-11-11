@@ -1,4 +1,27 @@
 {
-    "DelegatedPersonData": "Delegated Person Data"
-  
+    "Arabic": "AR",
+    "English": "EN",
+    "OURNEWS": "OUR NEWS",
+    "ContactUS":"Contact US",
+    "PHOTOGALLARY":"PHOTO GALLARY",
+    "CERTIFICATE":"CERTIFICATE",
+    "Mandarins":"Mandarins",
+    "Grapefruit":"Grapefruit",
+    "Valenciaorange":"Valencia orange",
+    "Lemon":"Lemon",
+    "Citrus":"Citrus",
+    "Grapesflame":"Grapes flame",
+    "Grapescrimson":"Grapes crimson",
+    "Pomegranate":"Pomegranate",
+    "Grapesredglobe":"Grapes red globe",
+    "Grapessugraone":"Grapes sugraone",
+    "FRUIT":"FRUIT", 
+    "Potatos":"Potatos",
+    "Onionyellow":"Onion yellow",
+    "Onionwhite":"Onion white",
+    "RedOnions":"Red Onions",
+    "vegetables":"vegetables",
+    "OurProducts":"Our Products",
+    "AboutUS":"About US",
+    "Home":"الرئيسيه"  
 }
