@@ -1,4 +1,5 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/Products.service';
 
 declare var $ : any;
 
@@ -9,9 +10,10 @@ declare var $ : any;
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(public productService : ProductsService) { }
 
   ngOnInit() {
+
   }
 
   ngAfterViewInit(): void {

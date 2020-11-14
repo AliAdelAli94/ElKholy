@@ -32,17 +32,17 @@
                                             <span class="menu-text">{{"OurProducts" | translate}}</span>
                                             <i class="fa fa-angle-down"></i>
                                         </a>
-                                        <div class="mega-menu dropdown-hover">
-                                            <div class="menu-colum">
+                                        <div class="mega-menu dropdown-hover" >
+                                            <div class="menu-colum" *ngFor="let category of productService.CategoriesWithProducts">
                                                 <ul>
-                                                    <li><span class="mega-menu-text">{{"vegetables" | translate}}</span></li>
-                                                    <li><a href="shop.html">{{"RedOnions" | translate}}</a></li>
-                                                    <li><a href="shop-right-sidebar.html">{{"Onionwhite" | translate}}</a></li>
+                                                    <li><span class="mega-menu-text">{{category.Title | translate}}</span></li>
+                                                    <li *ngFor="let product of category.Products" ><a [routerLink] = "['/product-details',product.Id]">{{product.Title | translate}}</a></li>
+                                                  <!--  <li><a href="shop-right-sidebar.html">{{"Onionwhite" | translate}}</a></li>
                                                     <li><a href="shop-list-left.html">{{"Onionyellow" | translate}}</a></li>
-                                                    <li><a href="shop-list-left.html">{{"Potatos" | translate}} </a></li>
+                                                    <li><a href="shop-list-left.html">{{"Potatos" | translate}} </a></li>-->
                                                 </ul>
                                             </div>
-                                            <div class="menu-colum">
+                                     <!---       <div class="menu-colum">
                                                 <ul>
                                                     <li><span class="mega-menu-text">{{"FRUIT" | translate}} </span></li>
                                                     <li><a href="product-details.html">{{"Grapessugraone" | translate}}</a></li>
@@ -60,7 +60,7 @@
                                                     <li><a href="cart.html">{{"Grapefruit" | translate}}</a></li>
                                                     <li><a href="checkout.html">{{"Mandarins" | translate}}</a></li>
                                                 </ul>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </li>
                                     <li>
