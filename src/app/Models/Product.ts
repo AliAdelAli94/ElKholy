@@ -1,3 +1,5 @@
+import { ReleatedProduct } from './ReleatedProduct';
+
 export class Product {
     Id : number;
     Title: string;
@@ -7,7 +9,7 @@ export class Product {
     NumberofPallets : string;
     ContainerType : string;
     AvailableCounts : string;
-    ReleatedProducts : number[];
+    ReleatedProducts : ReleatedProduct[];
     Packing : string[];
     CartonNetWeight:string;
     NoOfCartons:string;
