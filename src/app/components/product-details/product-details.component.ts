@@ -13,8 +13,10 @@ declare var $rows:any;
 export class ProductDetailsComponent implements OnInit , AfterViewInit{
 productId : number ;
 productData : Product;
-  constructor(private router : ActivatedRoute,private productService : ProductsService) { 
-
+  constructor(private router : ActivatedRoute,private productService : ProductsService, private route : Router) { 
+    this.route.routeReuseStrategy.shouldReuseRoute = function () {
+      return false;
+    };
   }
 
   ngOnInit() {
@@ -24,9 +26,14 @@ productData : Product;
     if(this.productId)
       this.productData = this.productService.getProductbyId(this.productId);   
    }
+   changeProduct(id){
+    this.productData = this.productService.getProductbyId(id);   
+    this.animateElements();
+   }
    ngAfterViewInit(){
     this.animateElements();
   }
+  
 
   animateElements() {
     
@@ -227,5 +234,12 @@ productData : Product;
       });
     };
   }
+   scrollToTop() {
+     
+      $('html, body').animate({
+        scrollTop: 0
+      }, 600);
+  }
+
 
 }

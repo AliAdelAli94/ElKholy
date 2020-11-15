@@ -21,7 +21,7 @@ export class ProductsService {
         Description: "RedOnionsDescription",
         ContainerType: "RedOnionsContainerType",
         NumberofPallets: "RedOnionsNumberofPallets",
-        ReleatedProducts: [2, 3, 4],
+        ReleatedProducts: [{Id:2,Title:"Onionwhite"}, {Id:3,Title:"Onionyellow"}, {Id:4,Title:"Potatos"}],
         NoOfCartons: "",
         Images: [],
         Packing: [],
@@ -30,12 +30,12 @@ export class ProductsService {
 
       }, {
         Id: 2,
-        Title: "RedOnions",
+        Title: "Onionwhite",
         AvailableCounts: "OnionwhiteAvailableCounts",
         Description: "OnionwhiteDescription",
         ContainerType: "OnionwhiteContainerType",
         NumberofPallets: "OnionwhiteNumberofPallets",
-        ReleatedProducts: [1, 3, 4],
+        ReleatedProducts: [{Id:1,Title:"RedOnions"}, {Id:3,Title:"Onionyellow"}, {Id:4,Title:"Potatos"}],
         Images: [],
         NoOfCartons: "",
         Packing: [],
@@ -50,7 +50,7 @@ export class ProductsService {
         ContainerType: "",
         NumberofPallets: "",
         NoOfCartons: "",
-        ReleatedProducts: [1, 2, 4],
+        ReleatedProducts: [{Id:1,Title:"RedOnions"}, {Id:2,Title:"Onionwhite"}, {Id:4,Title:"Potatos"}],
         Images: [],
         Packing: ["OnionyellowPacking1", "OnionyellowPacking2"],
         CartonNetWeight: "OnionyellowNetWeight",
@@ -63,7 +63,7 @@ export class ProductsService {
         ContainerType: "",
         NoOfCartons: "",
         NumberofPallets: "",
-        ReleatedProducts: [1, 2, 3],
+        ReleatedProducts: [{Id:1,Title:"RedOnions"}, {Id:2,Title:"Onionwhite"}, {Id:3,Title:"Onionyellow"}],
         Images: [],
         Packing: ["PotatosPacking1", "PotatosPacking2"],
         CartonNetWeight: "",
@@ -85,7 +85,7 @@ export class ProductsService {
         NoOfCartons: "",
         NumberofPallets: "GrapessugraoneNumberofPallets",
         Packing: ["GrapessugraonePacking1", "GrapessugraonePacking2"],
-        ReleatedProducts: [6, 7, 8, 9],
+        ReleatedProducts: [{Id:6,Title:"GrapesredglobeTitle"}, {Id:7,Title:"Pomegranate"}, {Id:8,Title:"Grapescrimson"},{Id:9,Title:"Grapesflame"}],
         Seasons: ["May", "Jun", "Jul"]
       }, {
         Id: 6,
@@ -98,7 +98,7 @@ export class ProductsService {
         NumberofPallets: "",
         NoOfCartons: "",
         Packing: ["GrapesredglobePacking1", "GrapesredglobePacking2"],
-        ReleatedProducts: [5, 7, 8, 9],
+        ReleatedProducts: [{Id:5,Title:"GrapessugraoneTitle"}, {Id:7,Title:"Pomegranate"}, {Id:8,Title:"Grapescrimson"},{Id:9,Title:"Grapesflame"}],
         Seasons: ["Jul", "Aug"]
       }, {
         Id: 7,
@@ -110,7 +110,7 @@ export class ProductsService {
         Description: "PomegranateDescription",
         NumberofPallets: "PomegranateNumberofPallets",
         Packing: ["PomegranatePacking1", "PomegranatePacking2"],
-        ReleatedProducts: [5, 6, 8, 9],
+        ReleatedProducts: [{Id:5,Title:"GrapessugraoneTitle"}, {Id:6,Title:"GrapesredglobeTitle"}, {Id:8,Title:"Grapescrimson"},{Id:9,Title:"Grapesflame"}],
         NoOfCartons: "",
         Seasons: ["Sep", "Oct", "Nov"]
       }, {
@@ -124,7 +124,7 @@ export class ProductsService {
         Description: "GrapescrimsonDescription",
         NumberofPallets: "",
         Packing: ["GrapescrimsonPacking1", "GrapescrimsonPacking2"],
-        ReleatedProducts: [5, 6, 7, 9],
+        ReleatedProducts: [{Id:5,Title:"GrapessugraoneTitle"}, {Id:6,Title:"GrapesredglobeTitle"}, {Id:7,Title:"Pomegranate"},{Id:9,Title:"Grapesflame"}],
         Seasons: ["Aug", "Sep"]
       }, {
         Id: 9,
@@ -137,7 +137,7 @@ export class ProductsService {
         Description: "GrapesflameDescription",
         NumberofPallets: "GrapesflameNumberofPallets",
         Packing: ["GrapesflamePacking1", "GrapesflamePacking2"],
-        ReleatedProducts: [5, 6, 7, 8],
+        ReleatedProducts: [{Id:5,Title:"GrapessugraoneTitle"}, {Id:6,Title:"GrapesredglobeTitle"}, {Id:7,Title:"Pomegranate"},{Id:8,Title:"Grapescrimson"}],
         Seasons: ["Jun", "Jul"]
       }
       ]
@@ -154,7 +154,7 @@ export class ProductsService {
         Description: "LemonDescription",
         NumberofPallets: "LemonNumberofPallets",
         Packing: ["LemonPacking1", "LemonPacking2"],
-        ReleatedProducts: [11, 12, 13, 14],
+        ReleatedProducts: [{Id:11,Title:"Valenciaorange"}, {Id:12,Title:"Navalorange"}, {Id:13,Title:"Grapefruit"},{Id:14,Title:"Mandarins"}],
         Seasons: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Dec"],
         NoOfCartons: "LemonNoOfCartons"
       }, {
@@ -167,7 +167,7 @@ export class ProductsService {
         Description: "ValenciaorangeDescription",
         NumberofPallets: "ValenciaorangeNumberofPallets",
         Packing: ["ValenciaorangePacking1", "ValenciaorangePacking2"],
-        ReleatedProducts: [10, 12, 13, 14],
+        ReleatedProducts: [{Id:10,Title:"Lemon"}, {Id:12,Title:"Navalorange"}, {Id:13,Title:"Grapefruit"},{Id:14,Title:"Mandarins"}],
         Seasons: ["Jan", "Feb", "Mar", "Apr", "May"],
         NoOfCartons: "ValenciaorangeNoOfCartons"
 
@@ -181,7 +181,7 @@ export class ProductsService {
         Description: "NavalorangeDescription",
         NumberofPallets: "NavalorangeNumberofPallets",
         Packing: ["NavalorangePacking1", "NavalorangePacking2"],
-        ReleatedProducts: [10, 11, 13, 14],
+        ReleatedProducts: [{Id:10,Title:"Lemon"}, {Id:11,Title:"Valenciaorange"}, {Id:13,Title:"Grapefruit"},{Id:14,Title:"Mandarins"}],
         Seasons: ["Jan", "Feb", "Mar", "Apr", "May"],
         NoOfCartons: "NavalorangeNoOfCartons"
       }, {
@@ -194,7 +194,7 @@ export class ProductsService {
         Description: "GrapefruitDescription",
         NumberofPallets: "GrapefruitNumberofPallets",
         Packing: ["GrapefruitPacking1", "NGrapefruitPacking2"],
-        ReleatedProducts: [10, 11, 12, 14],
+        ReleatedProducts: [{Id:10,Title:"Lemon"}, {Id:11,Title:"Valenciaorange"}, {Id:12,Title:"Navalorange"},{Id:14,Title:"Mandarins"}],
         Seasons: ["Jan", "Feb", "Nov", "Dec"],
         NoOfCartons: "GrapefruitNoOfCartons"
       }, {
@@ -207,7 +207,7 @@ export class ProductsService {
         Description: "",
         NumberofPallets: "MandarinsNumberofPallets",
         Packing: [],
-        ReleatedProducts: [10, 11, 12, 13],
+        ReleatedProducts:[{Id:10,Title:"Lemon"}, {Id:11,Title:"Valenciaorange"}, {Id:12,Title:"Navalorange"},{Id:13,Title:"Grapefruit"}],
         Seasons: ["Feb", "Mar"],
         NoOfCartons: "MandarinsNoOfCartons"
       }
