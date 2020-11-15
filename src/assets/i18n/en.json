@@ -104,6 +104,7 @@
     "vegetables":"vegetables",
     "OurProducts":"Our Products",
     "AboutUS":"About US",
+    "Home":"Home",
     "Jan": "Jan",
     "Feb": "Feb",
     "Mar": "Mar",
@@ -116,5 +117,13 @@
     "Oct": "Oct",
     "Nov": "Nov",
     "Dec": "Dec",
-    "Home":"الرئيسيه"  
+    "ProductDetails":"Product Details",
+    "Season":"Season",
+    "NumberOfPallets": "Total No. of Pallets in Container",
+    "ContainerType":"Container Type",
+    "AvailableCounts":"Available Counts",
+    "CartonWeight":"Carton Net Weight",
+    "CartonsPerContainer":"Cartons per Container",
+    "Packaging":"Packaging"
+   
 }

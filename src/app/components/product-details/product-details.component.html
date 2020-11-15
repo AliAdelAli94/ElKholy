@@ -5,10 +5,10 @@
             <div class="row">
                 <div class="col-12 text-center">
                     <div class="breadcrumb-content position-relative section-content">
-                        <h3 class="title-3">Product Details</h3>
+                        <h3 class="title-3">{{"ProductDetails" | translate}}</h3>
                         <ul>
-                            <li><a href="index.html">Home</a></li>
-                            <li>Product Details</li>
+                            <li><a href="index.html">{{"Home" | translate}}</a></li>
+                            <li>{{"ProductDetails" | translate}}</li>
                         </ul>
                     </div>
                 </div>
@@ -37,8 +37,9 @@
                                         data-slick-index="0" aria-hidden="false"
                                         style="width: 445px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
                                         tabindex="0">
-                                        <a href="assets/images/product/large-size/1.jpg" tabindex="0">
-                                            <img src="assets/images/product/large-size/1.jpg" alt="Product">
+                                        <a href="assets/images/product/large-size/{{productData.Id}}.jpg" tabindex="0">
+                                            <img src="assets/images/product/large-size/{{productData.Id}}.jpg"
+                                                alt="Product">
                                         </a>
                                     </div>
                                 </div>
@@ -58,9 +59,10 @@
                         <div class="product-head mb-3">
                             <h2 class="product-title">{{productData.Title | translate}}</h2>
                         </div>
-                  
+
                         <p class="desc-content mb-5">{{productData.Description | translate}}</p>
-             
+                        <h4 class="product-title">{{"Season" | translate}} </h4>
+                            <span > {{seasonString}} </span>
                     </div>
                 </div>
             </div>
@@ -71,19 +73,27 @@
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active text-uppercase" id="home-tab" data-toggle="tab" href="#connect-1"
-                                role="tab" aria-selected="true">Description</a>
+                                role="tab" aria-selected="true">{{"ContainerType" | translate}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" id="profile-tab" data-toggle="tab" href="#connect-2"
-                                role="tab" aria-selected="false">Reviews</a>
+                                role="tab" aria-selected="false">{{"NumberOfPallets" | translate}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#connect-3"
-                                role="tab" aria-selected="false">Shipping Policy</a>
+                                role="tab" aria-selected="false">{{"AvailableCounts" | translate}}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-uppercase" id="review-tab" data-toggle="tab" href="#connect-4"
-                                role="tab" aria-selected="false">Size Chart</a>
+                                role="tab" aria-selected="false">{{"CartonWeight" | translate}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="review-tab" data-toggle="tab" href="#connect-4"
+                                role="tab" aria-selected="false">{{"CartonsPerContainer" | translate}}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-uppercase" id="review-tab" data-toggle="tab" href="#connect-4"
+                                role="tab" aria-selected="false">{{"Packaging" | translate}}</a>
                         </li>
                     </ul>
                     <div class="tab-content mb-text" id="myTabContent">

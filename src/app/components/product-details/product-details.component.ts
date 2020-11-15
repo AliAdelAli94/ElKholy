@@ -1,19 +1,20 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Router, ActivatedRoute , Params } from '@angular/router';
+import { Router, ActivatedRoute, Params } from '@angular/router';
 import { ProductsService } from 'src/app/services/Products.service';
 import { Product } from 'src/app/Models/Product';
 declare var $: any;
-declare var $html:any;
-declare var $rows:any;
+declare var $html: any;
+declare var $rows: any;
 @Component({
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css']
 })
-export class ProductDetailsComponent implements OnInit , AfterViewInit{
-productId : number ;
-productData : Product;
-  constructor(private router : ActivatedRoute,private productService : ProductsService, private route : Router) { 
+export class ProductDetailsComponent implements OnInit, AfterViewInit {
+  productId: number;
+  productData: Product;
+  seasonString: string = "";
+  constructor(private router: ActivatedRoute, private productService: ProductsService, private route: Router) {
     this.route.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -23,20 +24,29 @@ productData : Product;
     let queryStringSegments: string[] = [];
     queryStringSegments = window.location.href.split('/');
     this.productId = parseInt(queryStringSegments[queryStringSegments.length - 1]);
-    if(this.productId)
-      this.productData = this.productService.getProductbyId(this.productId);   
-   }
-   changeProduct(id){
-    this.productData = this.productService.getProductbyId(id);   
-    this.animateElements();
-   }
-   ngAfterViewInit(){
+    if (this.productId) {
+      this.productData = this.productService.getProductbyId(this.productId);
+      for (let i = 0; i < this.productData.Seasons.length; i++) {
+        if(i!=this.productData.Seasons.length - 1)
+          this.seasonString += this.productData.Seasons[i] + " - ";
+        else
+          this.seasonString += this.productData.Seasons[i] + ". ";
+
+      }
+    }
+
+  }
+  changeProduct(id) {
+    this.productData = this.productService.getProductbyId(id);
     this.animateElements();
   }
-  
+  ngAfterViewInit() {
+    this.animateElements();
+  }
+
 
   animateElements() {
-    
+
     var $html = $('html');
     var $body = $('body');
     var $elementCarousel = $('.obrien-slider, .product-slider');
@@ -67,7 +77,7 @@ productData : Product;
         var $spaceBetween = $options.spaceBetween ? parseInt($options.spaceBetween, 10) : 0,
           $spaceBetween_xl = $options.spaceBetween_xl ? parseInt($options.spaceBetween_xl, 10) : 0,
           $rowSpace = $options.rowSpace ? parseInt($options.rowSpace, 10) : 0,
-        //  $rows = $options.rows ? $options.rows : false,
+          //  $rows = $options.rows ? $options.rows : false,
           $vertical = $options.vertical ? $options.vertical : false,
           $focusOnSelect = $options.focusOnSelect ? $options.focusOnSelect : false,
           $pauseOnHover = $options.pauseOnHover ? $options.pauseOnHover : false,
@@ -234,11 +244,11 @@ productData : Product;
       });
     };
   }
-   scrollToTop() {
-     
-      $('html, body').animate({
-        scrollTop: 0
-      }, 600);
+  scrollToTop() {
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 600);
   }
 
 
