@@ -103,7 +103,7 @@
     "RedOnionsAvailableCounts": "40-60 , 50-70 , 60-80 , 70-90 , 80-100 , 90-110",
     "vegetables":"vegetables",
     "OurProducts":"Our Products",
-    "AboutUS":"About US",
+    "AboutUS":"About Us",
     "Home":"Home",
     "Jan": "Jan",
     "Feb": "Feb",
@@ -119,11 +119,11 @@
     "Dec": "Dec",
     "ProductDetails":"Product Details",
     "Season":"Season",
-    "NumberOfPallets": "Total No. of Pallets in Container",
+    "NumberOfPallets": "Number of Pallets/Container",
     "ContainerType":"Container Type",
     "AvailableCounts":"Available Counts",
     "CartonWeight":"Carton Net Weight",
     "CartonsPerContainer":"Cartons per Container",
-    "Packaging":"Packaging"
+    "Packaging":"Packaging Description"
    
 }

@@ -119,11 +119,11 @@
     "Dec": "Dec",
     "ProductDetails":"Product Details",
     "Season":"Season",
-    "NumberOfPallets": "Total No. of Pallets in Container",
+    "NumberOfPallets": "Number of Pallets/Container",
     "ContainerType":"Container Type",
     "AvailableCounts":"Available Counts",
     "CartonWeight":"Carton Net Weight",
     "CartonsPerContainer":"Cartons per Container",
-    "Packaging":"Packaging"
+    "Packaging":"Packaging Description"
    
 }

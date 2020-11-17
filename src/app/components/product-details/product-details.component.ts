@@ -33,6 +33,8 @@ export class ProductDetailsComponent implements OnInit, AfterViewInit {
           this.seasonString += this.productData.Seasons[i] + ". ";
 
       }
+   
+
     }
 
   }
@@ -42,6 +44,11 @@ export class ProductDetailsComponent implements OnInit, AfterViewInit {
   }
   ngAfterViewInit() {
     this.animateElements();
+    let id = $('.tab-pane')[0].id;
+    $('#'+id).addClass("show active");
+    let linkId = $('.nav-link')[0].id;
+    $('#'+linkId).addClass("active");
+
   }
 
 
