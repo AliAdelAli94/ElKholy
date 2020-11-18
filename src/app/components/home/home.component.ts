@@ -1,25 +1,26 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { ProductsService } from 'src/app/services/Products.service';
 
 declare var $: any;
-declare var $html:any;
-declare var $rows:any;
+declare var $html: any;
+declare var $rows: any;
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit,AfterViewInit {
+export class HomeComponent implements OnInit, AfterViewInit {
 
-  constructor() { }
+  constructor(public productsService : ProductsService) { }
 
   ngOnInit() {
   }
-  ngAfterViewInit(){
+  ngAfterViewInit() {
     this.animateElements();
   }
 
   animateElements() {
-    
+
     var $html = $('html');
     var $body = $('body');
     var $elementCarousel = $('.obrien-slider, .product-slider');
@@ -50,7 +51,7 @@ export class HomeComponent implements OnInit,AfterViewInit {
         var $spaceBetween = $options.spaceBetween ? parseInt($options.spaceBetween, 10) : 0,
           $spaceBetween_xl = $options.spaceBetween_xl ? parseInt($options.spaceBetween_xl, 10) : 0,
           $rowSpace = $options.rowSpace ? parseInt($options.rowSpace, 10) : 0,
-        //  $rows = $options.rows ? $options.rows : false,
+          //  $rows = $options.rows ? $options.rows : false,
           $vertical = $options.vertical ? $options.vertical : false,
           $focusOnSelect = $options.focusOnSelect ? $options.focusOnSelect : false,
           $pauseOnHover = $options.pauseOnHover ? $options.pauseOnHover : false,
@@ -216,5 +217,12 @@ export class HomeComponent implements OnInit,AfterViewInit {
         }
       });
     };
+  }
+
+  scrollToTop() {
+
+    $('html, body').animate({
+      scrollTop: 0
+    }, 600);
   }
 }
