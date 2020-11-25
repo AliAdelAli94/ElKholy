@@ -124,6 +124,11 @@
     "AvailableCounts":"Available Counts",
     "CartonWeight":"Carton Net Weight",
     "CartonsPerContainer":"Cartons per Container",
-    "Packaging":"Packaging Description"
+    "Packaging":"Packaging Description",
+    "welcometo": "Welcome To",
+    "elkholy":"El Kholy",
+    "forexport":"For Exporting Agricultural Products",
+    "freshProducts": "Fresh Products",
+    "listProducts": "Fruits , Vegetables and Citrus"
    
 }

@@ -37,8 +37,8 @@
                                         data-slick-index="0" aria-hidden="false"
                                         style="width: 445px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
                                         tabindex="0">
-                                        <a href="assets/images/product/large-size/{{productData.Id}}.jpg" tabindex="0">
-                                            <img src="assets/images/product/large-size/{{productData.Id}}.jpg"
+                                        <a href="{{productData.ImageURL}}" tabindex="0">
+                                            <img src="{{productData.ImageURL}}"
                                                 alt="Product">
                                         </a>
                                     </div>
@@ -173,7 +173,7 @@
                                 <div class="product-image">
                                     <a class="d-block" (click)="scrollToTop()"
                                         [routerLink]="['/product-details',item.Id]">
-                                        <img src="assets/images/product/{{item.Id}}.jpg" alt=""
+                                        <img src="{{productService.getProductbyId(item.Id).ImageURL}}" alt=""
                                             class="product-image-1 w-100">
                                     </a>
                                 </div>

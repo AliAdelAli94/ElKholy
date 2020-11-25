@@ -14,7 +14,7 @@ export class ProductDetailsComponent implements OnInit, AfterViewInit {
   productId: number;
   productData: Product;
   seasonString: string = "";
-  constructor(private router: ActivatedRoute, private productService: ProductsService, private route: Router) {
+  constructor(private router: ActivatedRoute, public productService: ProductsService, private route: Router) {
     this.route.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
