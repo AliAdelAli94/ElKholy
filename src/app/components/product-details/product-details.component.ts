@@ -2,6 +2,7 @@ import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { ProductsService } from 'src/app/services/Products.service';
 import { Product } from 'src/app/Models/Product';
+import { TranslateService } from '@ngx-translate/core';
 declare var $: any;
 declare var $html: any;
 declare var $rows: any;
@@ -14,7 +15,7 @@ export class ProductDetailsComponent implements OnInit, AfterViewInit {
   productId: number;
   productData: Product;
   seasonString: string = "";
-  constructor(private router: ActivatedRoute, public productService: ProductsService, private route: Router) {
+  constructor(private router: ActivatedRoute, public productService: ProductsService, private route: Router, private translate: TranslateService) {
     this.route.routeReuseStrategy.shouldReuseRoute = function () {
       return false;
     };
@@ -26,15 +27,6 @@ export class ProductDetailsComponent implements OnInit, AfterViewInit {
     this.productId = parseInt(queryStringSegments[queryStringSegments.length - 1]);
     if (this.productId) {
       this.productData = this.productService.getProductbyId(this.productId);
-      for (let i = 0; i < this.productData.Seasons.length; i++) {
-        if(i!=this.productData.Seasons.length - 1)
-          this.seasonString += this.productData.Seasons[i] + " - ";
-        else
-          this.seasonString += this.productData.Seasons[i] + ". ";
-
-      }
-   
-
     }
 
   }
@@ -45,9 +37,9 @@ export class ProductDetailsComponent implements OnInit, AfterViewInit {
   ngAfterViewInit() {
     this.animateElements();
     let id = $('.tab-pane')[0].id;
-    $('#'+id).addClass("show active");
+    $('#' + id).addClass("show active");
     let linkId = $('.nav-link')[0].id;
-    $('#'+linkId).addClass("active");
+    $('#' + linkId).addClass("active");
 
   }
 

@@ -38,8 +38,7 @@
                                         style="width: 445px; position: relative; left: 0px; top: 0px; z-index: 999; opacity: 1;"
                                         tabindex="0">
                                         <a href="{{productData.ImageURL}}" tabindex="0">
-                                            <img src="{{productData.ImageURL}}"
-                                                alt="Product">
+                                            <img src="{{productData.ImageURL}}" alt="Product">
                                         </a>
                                     </div>
                                 </div>
@@ -62,7 +61,9 @@
 
                         <p class="desc-content mb-5">{{productData.Description | translate}}</p>
                         <h4 class="product-title">{{"Season" | translate}} </h4>
-                            <span > {{seasonString}} </span>
+                        <span *ngFor="let season of productData.Seasons;let H = index">{{season | translate}}
+                            {{'.'}}
+                        </span>
                     </div>
                 </div>
             </div>
@@ -72,19 +73,19 @@
                 <div class="col-lg-12">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
                         <li class="nav-item" *ngIf="productData.ContainerType">
-                            <a class="nav-link active text-uppercase"  id="home-tab" data-toggle="tab" href="#connect-1"
+                            <a class="nav-link active text-uppercase" id="home-tab" data-toggle="tab" href="#connect-1"
                                 role="tab" aria-selected="true">{{"ContainerType" | translate}}</a>
                         </li>
                         <li class="nav-item" *ngIf="productData.NumberofPallets">
-                            <a class="nav-link text-uppercase" id="profile-tab"  data-toggle="tab" href="#connect-2"
+                            <a class="nav-link text-uppercase" id="profile-tab" data-toggle="tab" href="#connect-2"
                                 role="tab" aria-selected="false">{{"NumberOfPallets" | translate}}</a>
                         </li>
                         <li class="nav-item" *ngIf="productData.AvailableCounts">
-                            <a class="nav-link text-uppercase" id="contact-tab"  data-toggle="tab" href="#connect-3"
+                            <a class="nav-link text-uppercase" id="contact-tab" data-toggle="tab" href="#connect-3"
                                 role="tab" aria-selected="false">{{"AvailableCounts" | translate}}</a>
                         </li>
                         <li class="nav-item" *ngIf="productData.CartonNetWeight">
-                            <a class="nav-link text-uppercase" id="review-tab"  data-toggle="tab" href="#connect-4"
+                            <a class="nav-link text-uppercase" id="review-tab" data-toggle="tab" href="#connect-4"
                                 role="tab" aria-selected="false">{{"CartonWeight" | translate}}</a>
                         </li>
                         <li class="nav-item" *ngIf="productData.NoOfCartons">
@@ -97,34 +98,39 @@
                         </li>
                     </ul>
                     <div class="tab-content mb-text" id="myTabContent">
-                        <div class="tab-pane fade show active" *ngIf="productData.ContainerType" id="connect-1" role="tabpanel"
-                            aria-labelledby="home-tab">
+                        <div class="tab-pane fade show active" *ngIf="productData.ContainerType" id="connect-1"
+                            role="tabpanel" aria-labelledby="home-tab">
                             <div class="desc-content">
                                 <p class="mb-3">{{productData.ContainerType | translate}}</p>
                             </div>
                         </div>
-                        <div class="tab-pane fade" *ngIf="productData.NumberofPallets" id="connect-2"  role="tabpanel" aria-labelledby="profile-tab">
+                        <div class="tab-pane fade" *ngIf="productData.NumberofPallets" id="connect-2" role="tabpanel"
+                            aria-labelledby="profile-tab">
                             <div class="desc-content">
                                 <p class="mb-3">{{productData.NumberofPallets | translate}}</p>
                             </div>
                         </div>
-                        <div class="tab-pane fade" *ngIf="productData.AvailableCounts" id="connect-3" role="tabpanel" aria-labelledby="contact-tab">
+                        <div class="tab-pane fade" *ngIf="productData.AvailableCounts" id="connect-3" role="tabpanel"
+                            aria-labelledby="contact-tab">
                             <div class="desc-content">
                                 <p class="mb-3">{{productData.AvailableCounts | translate}}</p>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="connect-4" role="tabpanel" *ngIf="productData.CartonNetWeight" aria-labelledby="review-tab">
+                        <div class="tab-pane fade" id="connect-4" role="tabpanel" *ngIf="productData.CartonNetWeight"
+                            aria-labelledby="review-tab">
                             <div class="desc-content">
                                 <p class="mb-3">{{productData.CartonNetWeight | translate}}</p>
                             </div>
                         </div>
-                        <div class="tab-pane fade" id="connect-5" role="tabpanel" *ngIf="productData.NoOfCartons" aria-labelledby="contact-tab">
+                        <div class="tab-pane fade" id="connect-5" role="tabpanel" *ngIf="productData.NoOfCartons"
+                            aria-labelledby="contact-tab">
                             <div class="desc-content">
                                 <p class="mb-3">{{productData.NoOfCartons | translate}}</p>
                             </div>
                         </div>
-                        <div class="tab-pane fade" *ngIf="productData.Packing.length > 0" id="connect-6" role="tabpanel" aria-labelledby="contact-tab">
-                            <div class="shipping-policy">                              
+                        <div class="tab-pane fade" *ngIf="productData.Packing.length > 0" id="connect-6" role="tabpanel"
+                            aria-labelledby="contact-tab">
+                            <div class="shipping-policy">
                                 <ul class="policy-list mb-2">
                                     <li *ngFor="let pack of productData.Packing">{{pack | translate}}</li>
                                 </ul>

@@ -10,7 +10,7 @@
                         <div class="col-lg-1 col-xl-2 col-sm-6 col-6 col-custom">
                             <div class="header-logo d-flex align-items-center">
                                 <a href="index.html">
-                                    <img class="img-full" src="assets/images/logo/logo.png" alt="Header Logo">
+                                    <img class="img-full" src="/assets/images/logo/logo.png" alt="Header Logo">
                                 </a>
                             </div>
                         </div>
@@ -27,7 +27,7 @@
                                             <span class="menu-text">{{"AboutUS" | translate}}</span>
                                         </a>
                                     </li>
-                                    <li>
+                                    <li *ngIf="commonService.siteLanguage == 'ar' ">
                                         <a>
                                             <span class="menu-text">{{"OurProducts" | translate}}</span>
                                             <i class="fa fa-angle-down"></i>
@@ -56,6 +56,25 @@
                                             <span class="menu-text"> {{"PHOTOGALLARY" | translate}}</span>
                                         </a>
                                     </li>
+                                    <li *ngIf="commonService.siteLanguage == 'en' ">
+                                        <a>
+                                            <span class="menu-text">{{"OurProducts" | translate}}</span>
+                                            <i class="fa fa-angle-down"></i>
+                                        </a>
+                                        <div class="mega-menu dropdown-hover">
+                                            <div class="menu-colum"
+                                                *ngFor="let category of productService.CategoriesWithProducts">
+                                                <ul>
+                                                    <li><span
+                                                            class="mega-menu-text">{{category.Title | translate}}</span>
+                                                    </li>
+                                                    <li *ngFor="let product of category.Products"><a
+                                                            [routerLink]="['/product-details',product.Id]">{{product.Title | translate}}</a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
                                     <li>
                                         <a href="">
                                             <span class="menu-text">{{"OURNEWS" | translate}} </span>
@@ -73,10 +92,10 @@
                             <div class="header-right-area main-nav">
                                 <ul class="nav">
                                     <li class="sidemenu-wrap d-none d-lg-flex">
-                                        <a>EN <i class="fa fa-caret-down"></i> </a>
+                                        <a>{{commonService.siteLanguage.toLocaleUpperCase()}} <i class="fa fa-caret-down"></i> </a>
                                         <ul class="dropdown-sidemenu dropdown-hover-2 dropdown-language">
-                                            <li><a>{{"AR" | translate}}</a></li>
-                                            <li><a>{{"EN" | translate}}</a></li>
+                                            <li><a href="/arabic.html">{{"AR" | translate}}</a></li>
+                                            <li><a href="/index.html">{{"EN" | translate}}</a></li>
                                         </ul>
                                     </li>
                                     <li class="minicart-wrap">
@@ -170,39 +189,13 @@
                     <!-- mobile menu navigation end -->
                 </div>
                 <!-- mobile menu end -->
-                <div class="header-top-settings offcanvas-curreny-lang-support">
-                    <!-- mobile menu navigation start -->
-                    <nav>
-                        <ul class="mobile-menu">
-                            <li class="menu-item-has-children"><a>My Account</a>
-                                <ul class="dropdown">
-                                    <li><a href="login.html">Login</a></li>
-                                    <li><a href="register-2.html">Register</a></li>
-                                </ul>
-                            </li>
-                            <li class="menu-item-has-children"><a>Currency:USD</a>
-                                <ul class="dropdown">
-                                    <li><a>USD - US Dollar</a></li>
-                                    <li><a>EUR - Euro</a></li>
-                                    <li><a>GBP - British Pound</a></li>
-                                    <li><a>INR - Indian Rupee</a></li>
-                                    <li><a>BDT - Bangladesh Taka</a></li>
-                                    <li><a>JPY - Japan Yen</a></li>
-                                    <li><a>CAD - Canada Dollar</a></li>
-                                    <li><a>AUD - Australian Dollar</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </nav>
-                    <!-- mobile menu navigation end -->
-                </div>
                 <!-- offcanvas widget area start -->
                 <div class="offcanvas-widget-area">
                     <div class="top-info-wrap text-left text-black">
                         <ul>
                             <li>
                                 <i class="fa fa-phone"></i>
-                                <a href="info%40yourdomain.html">(1245) 2456 012</a>
+                                <a href="info%40yourdomain.html">01552282761</a>
                             </li>
                             <li>
                                 <i class="fa fa-envelope"></i>

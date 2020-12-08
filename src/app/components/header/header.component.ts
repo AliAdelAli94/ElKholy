@@ -1,5 +1,6 @@
 import { Component, OnInit, AfterViewInit } from '@angular/core';
 import { ProductsService } from 'src/app/services/Products.service';
+import { CommonService } from 'src/app/services/common.service';
 
 declare var $ : any;
 
@@ -10,10 +11,9 @@ declare var $ : any;
 })
 export class HeaderComponent implements OnInit, AfterViewInit {
 
-  constructor(public productService : ProductsService) { }
+  constructor(public productService : ProductsService, public commonService : CommonService) { }
 
-  ngOnInit() {
-
+  ngOnInit() {  
   }
 
   ngAfterViewInit(): void {

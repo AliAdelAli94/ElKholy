@@ -26,7 +26,7 @@
                 </div>
             </div>
         </div>
-        <div class="slide-item slide-2 bg-position slide-bg-1 animation-style-01">
+        <!-- <div class="slide-item slide-2 bg-position slide-bg-1 animation-style-01">
             <div class="slider-content">
                 <h4 class="slider-small-title">{{'welcometo' | translate}}</h4>
                 <h2 class="slider-large-title">{{'elkholy' | translate}}</h2>
@@ -34,7 +34,7 @@
                 <div class="slider-btn">
                 </div>
             </div>
-        </div>
+        </div> -->
     </div>
 </div>
 <!-- Slider Area One End Here -->
@@ -44,20 +44,17 @@
         <div class="row">
             <div class="col-xl-6 col-lg-5 col-md-12 col-custom">
                 <div class="feature-content-wrapper">
-                    <h2 class="title">Important to eat fruit</h2>
-                    <p class="desc-content">Eating fruit provides health benefits — people who eat more fruits and
-                        vegetables as part of an overall healthy diet are likely to have a reduced risk of some
-                        chronic diseases. Fruits provide nutrients vital for health and maintenance of your body.
+                    <h2 class="title">{{'Important' | translate}}</h2>
+                    <p class="desc-content">
+                        {{'ImportantP2' | translate}}
                     </p>
-                    <p class="desc-content"> Fruits are sources of many essential nutrients that are underconsumed,
-                        including potassium, dietary fiber, vitamin C, and folate (folic acid).</p>
-                    <p class="desc-content"> Most fruits are naturally low in fat, sodium, and calories. None have
-                        cholesterol.</p>
+                    <p class="desc-content">{{'ImportantP2' | translate}}</p>
+                    <p class="desc-content">{{'ImportantP3' | translate}}</p>
                 </div>
             </div>
             <div class="col-xl-6 col-lg-7 col-md-12 col-custom">
                 <div class="feature-image">
-                    <img src="assets/images/feature/feature-1.jpg" alt="Obrien Feature">
+                    <img src="/assets/images/feature/feature-1.jpg" alt="Obrien Feature">
                 </div>
             </div>
         </div>
@@ -70,7 +67,7 @@
         <div class="row">
             <div class="col-md-5 col-lg-6 text-center col-custom">
                 <div class="banner-thumb h-100 d-flex justify-content-center align-items-center">
-                    <img src="assets/images/banner/thumb/1.png" alt="Banner Thumb">
+                    <img src="/assets/images/banner/thumb/1.png" alt="Banner Thumb">
                 </div>
             </div>
             <div class="col-md-7 col-lg-6 text-center justify-content-center col-custom">
@@ -89,10 +86,9 @@
         <div class="row">
             <div class="col-lg-5 m-auto text-center col-custom">
                 <div class="section-content">
-                    <h2 class="title-1 text-uppercase">Featured Products</h2>
+                    <h2 class="title-1 text-uppercase">{{'FeaturedProducts' | translate}}</h2>
                     <div class="desc-content">
-                        <p>All best seller product are now available for you and your can buy this product from here
-                            any time any where so sop now</p>
+                        <p>{{'FeaturedProductsCaption' | translate}}</p>
                     </div>
                 </div>
             </div>
@@ -100,22 +96,22 @@
         <div class="row">
             <div class="col-lg-12 product-wrapper col-custom">
                 <div class="product-slider" data-slick-options='{
-                "slidesToShow": 4,
-                "slidesToScroll": 1,
-                "infinite": true,
-                "arrows": false,
-                "dots": false
-                }' data-slick-responsive='[
-                {"breakpoint": 1200, "settings": {
-                "slidesToShow": 3
-                }},
-                {"breakpoint": 992, "settings": {
-                "slidesToShow": 2
-                }},
-                {"breakpoint": 576, "settings": {
-                "slidesToShow": 1
-                }}
-                ]'>
+            "slidesToShow": 4,
+            "slidesToScroll": 1,
+            "infinite": true,
+            "arrows": false,
+            "dots": false
+            }' data-slick-responsive='[
+            {"breakpoint": 1200, "settings": {
+            "slidesToShow": 3
+            }},
+            {"breakpoint": 992, "settings": {
+            "slidesToShow": 2
+            }},
+            {"breakpoint": 576, "settings": {
+            "slidesToShow": 1
+            }}
+            ]'>
                     <div class="single-item" *ngFor="let item of productsService.FeaturedProdusts">
                         <div class="single-product position-relative">
                             <div class="product-image">
@@ -146,11 +142,11 @@
             <div class="col-lg-12 col-custom">
                 <div class="support-wrapper d-flex">
                     <div class="support-content">
-                        <h1 class="title">Need Help ?</h1>
-                        <p class="desc-content">Call our support 24/7 at 01552282761</p>
+                        <h1 class="title">{{'needHelp' | translate}}</h1>
+                        <p class="desc-content">{{'Call' | translate}} 24/7 {{'at' | translate}} 01552282761</p>
                     </div>
                     <div class="support-button d-flex align-items-center">
-                        <a class="obrien-button primary-btn" routerLink="/contact-us">Contact now</a>
+                        <a class="obrien-button primary-btn" routerLink="/contact-us">{{'ContactNow' | translate}}</a>
                     </div>
                 </div>
             </div>

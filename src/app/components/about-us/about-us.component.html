@@ -6,8 +6,8 @@
                   <div class="breadcrumb-content position-relative section-content">
                       <h3 class="title-3">{{"AboutUS" | translate}}</h3>
                       <ul>
-                          <li><a routerLink="/home">Home</a></li>
-                          <li>{{"AboutUS" | translate}}</li>
+                          <li><a routerLink="/home">{{"Home" | translate}}</a></li>
+                          <li>{{"WhoWeAre" | translate}}</li>
                       </ul>
                   </div>
               </div>
@@ -22,14 +22,14 @@
           <div class="row">
               <div class="col-xl-6 col-lg-5 col-md-12 col-custom">
                   <div class="feature-content-wrapper">
-                      <h2 class="title">Who We Are ?</h2>
-                      <p class="desc-content">El Kholy has become a leading fresh fruit and vegetable supplier form green land Egypt to worldwide . In Egypt the agricultural sector is the backbone of the economy. It absorbs about 36% of the total employment and contributes to about 17% of the gross domestic product (GDP).</p>
+                      <h2 class="title">{{"WhoWeAre" | translate}}</h2>
+                      <p class="desc-content">{{"WhoWeAreCaption" | translate}}</p>
                      
                   </div>
               </div>
               <div class="col-xl-6 col-lg-7 col-md-12 col-custom">
                   <div class="feature-image position-relative">
-                      <img src="assets/images/feature/feature-2.jpg" alt="Obrien Feature">
+                      <img src="/assets/images/feature/feature-2.jpg" alt="Obrien Feature">
                       <div class="popup-video position-absolute">
                           <a class="popup-vimeo" href="https://www.youtube.com/watch?v=_9VUPq3SxOc">
                               <i class="ion-play"></i>
@@ -42,23 +42,24 @@
   </div>
   <!-- Feature Area End Here -->
   <!-- About Us Area End Here -->
+
 <!-- Support Area Start Here -->
 <div class="support-area">
-  <div class="container container-default custom-area">
-      <div class="row">
-          <div class="col-lg-12 col-custom">
-              <div class="support-wrapper d-flex">
-                  <div class="support-content">
-                      <h1 class="title">Need Help ?</h1>
-                      <p class="desc-content">Call our support 24/7 at 01552-282-761</p>
-                  </div>
-                  <div class="support-button d-flex align-items-center">
-                      <a class="obrien-button primary-btn" routerLink="/contact-us">Contact now</a>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </div>
+    <div class="container container-default custom-area">
+        <div class="row">
+            <div class="col-lg-12 col-custom">
+                <div class="support-wrapper d-flex">
+                    <div class="support-content">
+                        <h1 class="title">{{'needHelp' | translate}}</h1>
+                        <p class="desc-content">{{'Call' | translate}} 24/7 {{'at' | translate}} 01552282761</p>
+                    </div>
+                    <div class="support-button d-flex align-items-center">
+                        <a class="obrien-button primary-btn" routerLink="/contact-us">{{'ContactNow' | translate}}</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 <!-- Support Area End Here -->
 </div>

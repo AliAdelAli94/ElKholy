@@ -123,8 +123,6 @@ export class ProductsService {
       { Id: 3, Title: "Onionyellow" },
       { Id: 4, Title: "Potatos" },
       { Id: 10, Title: "Lemon" },
-      { Id: 7, Title: "Pomegranate" },
-      { Id: 11, Title: "Valenciaorange" }
     ]
   }
   getProductbyId(id: number): Product {
